@@ -1,0 +1,16 @@
+package com.yedam.exam;
+
+public class Exercise03 {
+	public static void main(String[] args) {
+		int sum = 0;
+		for (int i = 1; i < 100; i++) {
+			if (i % 3 == 0) {
+				System.out.println("3배수 : " + i);
+				sum += i;
+			} else {
+//				System.out.println("3배수아님 : " + i);
+			}
+		}
+		System.out.println("3의 배수의 합 : " + sum);
+	}
+}
