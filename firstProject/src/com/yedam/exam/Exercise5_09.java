@@ -40,9 +40,10 @@ public class Exercise5_09 {
 						max = scores[i];
 					}
 				}
-				avg = sum / studentNum;
+				avg = (double) sum / studentNum;
 				System.out.println("최고 점수 : " + max);
-				System.out.println("평균 점수 : " + avg);
+				System.out.printf("평균 점수 : %.2f", avg);
+				System.out.println();
 			} else if (selectNo == 5) {
 				run = false;
 				System.out.println("프로그램 종료");
