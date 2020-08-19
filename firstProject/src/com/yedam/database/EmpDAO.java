@@ -58,9 +58,9 @@ public class EmpDAO {
 		return employees; // employees 배열을 반환
 	} // end of getEmpList()
 
-	public void updateEmp(int empId, int salary) {
+	public void updateEmp(Employee emp) {
 		Connection conn = DBConnection.getConnection();
-		String sql = "update emp_temp set salary = \'" + salary + "\' where employee_id = " + empId;
+		String sql = "update emp_temp set salary = \'" + emp.getSalary() + "\' where employee_id = " + emp.getEmployeeId();
 		System.out.println(sql);
 		try {
 			PreparedStatement psmt = conn.prepareStatement(sql);
