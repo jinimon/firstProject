@@ -22,7 +22,7 @@ public class Member {
 	public int getAge() {
 		return age;
 	}
-	// hasshCode, equals 적절히 활용. 논리적으로 동일한 객체
+	// hashCode, equals 적절히 활용. 논리적으로 동일한 객체
 
 	
 	// 반환해주는 값이 셋 다 같아서 중복으로 인식. 결과 하나만 출력됨 -> 0, true 출력
