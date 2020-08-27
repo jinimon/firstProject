@@ -42,36 +42,26 @@ public class CourseMain {
 		int cmax = scan.nextInt();
 
 		course = new Course(cname, cmax);
+		course.scores.put(cname, cmax);
 		cList.add(course);
 		System.out.println(cname + " 과정이 등록되었습니다.");
 	}
 
 	public static void insertStudent() {
 		if (cList.size() != 0) {
-			System.out.print("과목명 : ");
+			System.out.print("수강 신청 할 과목명 : ");
 			String cname = scan.next();
-			int max = 0;
-			if (course.getCname().equals(cname)) {
-				max = course.getCmax();
-			}
-			if (count < max) {
-				System.out.print("학생명 : ");
-				String sname = scan.next();
-				System.out.print("나이 : ");
-				int sage = scan.nextInt();
-				System.out.print("점수 : ");
-				int score = scan.nextInt();
+			System.out.print("학생명 : ");
+			String sname = scan.next();
+			System.out.print("나이 : ");
+			int sage = scan.nextInt();
+			System.out.print("점수 : ");
+			int score = scan.nextInt();
 
-				stu = new Student(sname, sage, score);
-				sList.add(stu);
-				if (course.getCname().equals(cname)) {
-					System.out.println("해당하는 과정 : " + cname);
-					course.add(stu);
+			for(Course course : cList) {
+				if(course.getCname().equals(cname)) {
+					course.course(new Student(sname, sage, score), cname);
 				}
-				System.out.println(cname + " 과정 " + sname + " 학생이 등록되었습니다.");
-				count++;
-			} else {
-				System.out.println("수강 인원이 초과되었습니다.");
 			}
 		} else {
 			System.out.println("등록된 과정이 없습니다. 과정을 등록해주세요");

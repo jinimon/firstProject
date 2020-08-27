@@ -1,5 +1,7 @@
 package com.yedam.apiSelf;
 
+import java.util.Arrays;
+
 public class Member implements Cloneable { // Member 클래스가 Cloneable 인터페이스를 구현
 	public String id;
 	public String name;
