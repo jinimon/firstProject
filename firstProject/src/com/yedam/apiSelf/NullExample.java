@@ -21,7 +21,8 @@ public class NullExample {
 			System.out.println(e.getMessage());
 		}
 
-		// 람다식
+		// 람다식. 원래는 아래 형식인데 축소시킴
+//		Objects.requireNonNull(obj, messageSupplier)
 		try {
 			String name = Objects.requireNonNull(str2, () -> "이름이 없다고.");
 		} catch (Exception e) {
